@@ -14,6 +14,8 @@ class ZoomSpec(
    */
   val maxZoomFactor: Float = 2f,
 
+  val minZoomAsRatioOfBaseZoom: Float = 1f,
+
   /**
    * Whether to apply rubber banding to zoom gestures when content is over or under zoomed
    * as a form of visual feedback that the content can't be zoomed any further. When set to false,
@@ -21,5 +23,5 @@ class ZoomSpec(
    */
   val preventOverOrUnderZoom: Boolean = true,
 ) {
-  internal val range = ZoomRange(maxZoomAsRatioOfSize = maxZoomFactor)
+  internal val range = ZoomRange(maxZoomAsRatioOfSize = maxZoomFactor, minZoomAsRatioOfBaseZoom = minZoomAsRatioOfBaseZoom)
 }
